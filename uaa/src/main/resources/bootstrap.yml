@@ -1,0 +1,42 @@
+server:
+  port: 7580
+spring:
+  application:
+    name: uaa-server
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 542265ec-08f1-4438-a715-6e30afbb0301
+        file-extension: yaml
+        group: DEFAULT_GROUP
+      discovery:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        namespace: ${spring.cloud.nacos.config.namespace}
+        cluster-name: DEFAULT
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8179
+#      ds1transportdatasource:
+#        ds1:
+#          nacos:
+#            server-addr: ${spring.cloud.nacos.config.server-addr}
+#            namespace: ${spring.cloud.nacos.config.namespace}
+#            data-id: cloudalibaba-sentinel-service
+#            group-id: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: flow
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
+    username: root
+    password: root
+feign:
+  sentinel:
+    enabled: true
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.contral.uaa.model

@@ -1,0 +1,53 @@
+server:
+  port: 9900
+spring:
+  application:
+    name: gatewary-server
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 542265ec-08f1-4438-a715-6e30afbb0301
+        file-extension: yaml
+        group: TEST_GROUP
+      discovery:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        namespace: ${spring.cloud.nacos.config.namespace}
+        cluster-name: DEFAULT
+  servlet:
+    multipart:
+      max-file-size: "1000MB"
+      max-request-size: "1000MB"
+zuul:
+  add-host-header: true
+  ribbon-isolation-strategy: thread
+  retryable: true
+  ribbon:
+    eager-load:
+      enabled: true
+  host:
+    connect-timeout-millis: 6000
+    socket-timeout-millis: 6000
+  ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin,Access-Control-Allow-Methods
+  routes:
+    uaa:
+      path: /api-uaa/**
+      service-id: uaa-server
+      strip-prefix: true
+      sensitive-headers: '*'
+      custom-sensitive-headers: true
+    user:
+      path: /api-user/**
+      service-id: user-server
+      strip-prefix: true
+      sensitive-headers: '*'
+      custom-sensitive-headers: true
+    image:
+      path: /api-image/**
+      service-id: image-server
+      strip-prefix: true
+      sensitive-headers: '*'
+      custom-sensitive-headers: true
+  ssl-hostname-validation-enabled: false

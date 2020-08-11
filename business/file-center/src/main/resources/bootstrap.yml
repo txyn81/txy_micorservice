@@ -1,0 +1,18 @@
+server:
+  port: 7577
+spring:
+  application:
+    name: file-server
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 542265ec-08f1-4438-a715-6e30afbb0301
+        file-extension: yaml
+        group: DEFAULT_GROUP
+      discovery:
+        server-addr: ${spring.cloud.nacos.config.server-addr}
+        namespace: ${spring.cloud.nacos.config.namespace}
+        cluster-name: DEFAULT

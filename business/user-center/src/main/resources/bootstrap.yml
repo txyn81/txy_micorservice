@@ -39,7 +39,6 @@ feign:
     enabled: true
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.contral.user.model
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 

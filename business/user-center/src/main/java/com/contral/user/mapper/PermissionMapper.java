@@ -1,7 +1,7 @@
 package com.contral.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.contral.user.model.Permission;
+import com.contral.core.model.Permission;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

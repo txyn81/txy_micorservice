@@ -1,6 +1,7 @@
 package com.contral.user.controller;
 
-import com.contral.user.model.SysUser;
+import com.contral.core.annotation.LoginUser;
+import com.contral.core.model.SysUser;
 import com.contral.user.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,9 +23,6 @@ public class UserController {
     @Resource
     private SysUserService sysUserService;
 
-    @Value("${server.port}")
-    private String port;
-
     /**
      * @author tangxiyuan
      * @date 2020/8/5 10:08 下午
@@ -33,9 +31,8 @@ public class UserController {
      */
     @GetMapping("service/s1")
     @PreAuthorize("hasAnyAuthority('p1')")
-    public String service() {
-        SysUser userDto = (SysUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return userDto + "user-center | "+ port + "";
+    public SysUser service(@LoginUser(isFull = true) SysUser sysUser) {
+        return sysUser;
     }
 
     @PostMapping("testParam")

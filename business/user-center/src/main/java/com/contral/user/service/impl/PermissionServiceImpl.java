@@ -1,7 +1,7 @@
 package com.contral.user.service.impl;
 
+import com.contral.core.model.Permission;
 import com.contral.user.mapper.PermissionMapper;
-import com.contral.user.model.Permission;
 import com.contral.user.service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

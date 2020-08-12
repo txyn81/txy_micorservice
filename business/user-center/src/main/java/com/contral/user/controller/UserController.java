@@ -1,15 +1,12 @@
 package com.contral.user.controller;
 
-import com.contral.user.feign.FileFeignService;
 import com.contral.user.model.SysUser;
 import com.contral.user.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -21,9 +18,6 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 public class UserController {
-
-    @Resource
-    private FileFeignService fileFeignService;
 
     @Resource
     private SysUserService sysUserService;
@@ -44,10 +38,10 @@ public class UserController {
         return userDto + "user-center | "+ port + "";
     }
 
-    @GetMapping("service/feign")
-    public String serviceFeign() {
-        String s = fileFeignService.fileService();
-        return "user-center | "+ port + s;
+    @PostMapping("testParam")
+    public SysUser testParam(@RequestBody SysUser sysUser,@RequestParam("tt") Integer tt) {
+        System.out.println(tt);
+        return sysUser;
     }
 
     @GetMapping("/users-anon/login")

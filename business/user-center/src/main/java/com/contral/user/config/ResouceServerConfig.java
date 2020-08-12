@@ -44,7 +44,6 @@ public class ResouceServerConfig extends ResourceServerConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/users-anon/**", "/permission-anon/**").permitAll()
                 .antMatchers("/**").access("#oauth2.hasScope('ROLE_ADMIN')")
-                .antMatchers("/service/feign").permitAll()
                 .and()
                 .csrf().disable()
                 //不用记录session

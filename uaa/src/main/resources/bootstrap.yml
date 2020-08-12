@@ -37,6 +37,3 @@ spring:
 feign:
   sentinel:
     enabled: true
-mybatis-plus:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.contral.uaa.model

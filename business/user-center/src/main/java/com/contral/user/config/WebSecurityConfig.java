@@ -22,8 +22,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 //所有配置的路径都必须经过认证
                 .antMatchers("/users-anon/**", "/permission-anon/**").permitAll()
-                .antMatchers("/service/**").authenticated()
-
                 .anyRequest().permitAll();
 
     }

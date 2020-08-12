@@ -1,4 +1,4 @@
-package com.contral.uaa.config;
+package com.contral.core.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @EnableTransactionManagement
 @Configuration
-public class MybatisPlusConfig {
+public class DefaultMybatisPlusConfig {
 
     @Bean
     public PaginationInterceptor paginationInterceptor() {

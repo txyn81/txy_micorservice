@@ -33,13 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                //所有配置的路径都必须经过认证
-                .antMatchers("/service/**").hasAnyAuthority("p1")
-                .antMatchers("/login*").permitAll()
-
                 .anyRequest().authenticated()
                 .and()
                 .formLogin();
-
     }
 }

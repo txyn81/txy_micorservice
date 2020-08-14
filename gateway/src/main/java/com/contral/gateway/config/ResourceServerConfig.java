@@ -67,7 +67,7 @@ public class ResourceServerConfig {
     }
 
     /**
-     * image资源
+     * file资源
      */
     @Configuration
     @EnableResourceServer
@@ -85,7 +85,7 @@ public class ResourceServerConfig {
         public void configure(HttpSecurity http) throws Exception {
             http
                     .authorizeRequests()
-                    .antMatchers("/api-image/**").access("#oauth2.hasScope('ROLE_API')");
+                    .antMatchers("/api-file/**").access("#oauth2.hasScope('ROLE_API')");
         }
 
     }

@@ -45,8 +45,8 @@ zuul:
       sensitive-headers: '*'
       custom-sensitive-headers: true
     image:
-      path: /api-image/**
-      service-id: image-server
+      path: /api-file/**
+      service-id: file-server
       strip-prefix: true
       sensitive-headers: '*'
       custom-sensitive-headers: true

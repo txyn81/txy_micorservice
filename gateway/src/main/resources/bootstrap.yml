@@ -31,23 +31,8 @@ zuul:
     connect-timeout-millis: 6000
     socket-timeout-millis: 6000
   ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin,Access-Control-Allow-Methods
-  routes:
-    uaa:
-      path: /api-uaa/**
-      service-id: uaa-server
-      strip-prefix: true
-      sensitive-headers: '*'
-      custom-sensitive-headers: true
-    user:
-      path: /api-user/**
-      service-id: user-server
-      strip-prefix: true
-      sensitive-headers: '*'
-      custom-sensitive-headers: true
-    image:
-      path: /api-file/**
-      service-id: file-server
-      strip-prefix: true
-      sensitive-headers: '*'
-      custom-sensitive-headers: true
   ssl-hostname-validation-enabled: false
+txy:
+  gateway:
+    dynamicRoute:
+      enabled: true

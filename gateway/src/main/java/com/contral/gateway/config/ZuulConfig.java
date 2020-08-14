@@ -10,7 +10,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 /**
- * @description: TODO
+ * @description: zuul跨域配置
  * @author: oren.tang
  * @date: 2020/8/8 5:26 下午
  */
@@ -27,13 +27,13 @@ public class ZuulConfig {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("*");
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
+        config.addAllowedOrigin(CorsConfiguration.ALL);
+        config.addAllowedHeader(CorsConfiguration.ALL);
+        config.addAllowedMethod(CorsConfiguration.ALL);
         config.setMaxAge(18000L);
         source.registerCorsConfiguration("/**", config);
         CorsFilter corsFilter = new CorsFilter(source);
-        FilterRegistrationBean bean = new FilterRegistrationBean(corsFilter);
+        FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(corsFilter);
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }

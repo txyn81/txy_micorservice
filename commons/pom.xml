@@ -13,6 +13,7 @@
         <module>common-core</module>
         <module>common-auth-client</module>
         <module>common-redis</module>
+        <module>common-db</module>
     </modules>
 
     <artifactId>commons</artifactId>

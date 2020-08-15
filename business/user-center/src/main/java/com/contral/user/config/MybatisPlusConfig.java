@@ -1,6 +1,6 @@
 package com.contral.user.config;
 
-import com.contral.common.core.config.DefaultMybatisPlusConfig;
+import com.contral.common.db.config.DefaultMyBatisPlusConfig;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @description mybatis-plus配置类
  */
 @Configuration
-public class MybatisPlusConfig extends DefaultMybatisPlusConfig {
+public class MybatisPlusConfig extends DefaultMyBatisPlusConfig {
 
 }

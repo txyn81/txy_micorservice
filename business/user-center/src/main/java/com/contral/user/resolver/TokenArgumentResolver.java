@@ -1,7 +1,7 @@
 package com.contral.user.resolver;
 
-import com.contral.core.annotation.LoginUser;
-import com.contral.core.model.SysUser;
+import com.contral.common.core.annotation.LoginUser;
+import com.contral.common.core.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.security.core.context.SecurityContextHolder;

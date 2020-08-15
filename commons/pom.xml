@@ -11,6 +11,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>common-core</module>
+        <module>common-auth-client</module>
+        <module>common-redis</module>
     </modules>
 
     <artifactId>commons</artifactId>

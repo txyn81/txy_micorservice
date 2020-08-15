@@ -1,10 +1,8 @@
 package com.contral.user.controller;
 
-import com.contral.core.annotation.LoginUser;
-import com.contral.core.model.SysUser;
-import com.contral.user.mapper.UserServiceMapper;
+import com.contral.common.core.annotation.LoginUser;
+import com.contral.common.core.model.SysUser;
 import com.contral.user.service.SysUserService;
-import com.sun.xml.bind.v2.model.core.ID;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

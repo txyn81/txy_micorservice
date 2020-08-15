@@ -1,6 +1,6 @@
 package com.contral.file.config;
 
-import com.contral.core.config.DefaultMybatisPlusConfig;
+import com.contral.common.core.config.DefaultMybatisPlusConfig;
 import org.springframework.context.annotation.Configuration;
 
 /**

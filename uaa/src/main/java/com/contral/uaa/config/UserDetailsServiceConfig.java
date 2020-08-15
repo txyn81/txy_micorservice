@@ -1,8 +1,8 @@
 package com.contral.uaa.config;
 
 import com.alibaba.fastjson.JSON;
-import com.contral.core.feign.UserService;
-import com.contral.core.model.SysUser;
+import com.contral.common.core.feign.UserService;
+import com.contral.common.core.model.SysUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

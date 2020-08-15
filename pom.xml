@@ -89,6 +89,11 @@
                 <artifactId>spring-social-security</artifactId>
                 <version>1.1.6.RELEASE</version>
             </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.6</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

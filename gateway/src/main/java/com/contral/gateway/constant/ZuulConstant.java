@@ -10,7 +10,7 @@ public interface ZuulConstant {
     /**
      * nacos的配置DataId
      */
-    public static final String ZUUL_DATA_ID="zuul-server";
+    public static final String ZUUL_DATA_ID="zuul-routes";
 
     /**
      * 对应的Group

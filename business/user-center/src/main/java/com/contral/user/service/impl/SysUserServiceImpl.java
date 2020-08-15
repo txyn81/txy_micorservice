@@ -1,8 +1,8 @@
 package com.contral.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.contral.core.model.SysUser;
-import com.contral.core.service.impl.SuperServiceImpl;
+import com.contral.common.core.model.SysUser;
+import com.contral.common.core.service.impl.SuperServiceImpl;
 import com.contral.user.mapper.UserServiceMapper;
 import com.contral.user.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;

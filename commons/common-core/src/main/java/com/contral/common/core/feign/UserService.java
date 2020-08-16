@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 /**
- * @description: TODO
+ * @description: security调用user服务查询用户身份、权限信息
  * @author: oren.tang
  * @date: 2020/8/11 11:33 下午
  */

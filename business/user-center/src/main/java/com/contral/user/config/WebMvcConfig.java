@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.List;
 
 /**
- * @description: TODO
+ * @description: 配置WebMvc，目的是给@SysUser注入值
  * @author: oren.tang
  * @date: 2020/8/12 9:34 下午
  */

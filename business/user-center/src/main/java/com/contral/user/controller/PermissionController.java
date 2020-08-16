@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * @description: TODO
+ * @description: 权限信息controller
  * @author: oren.tang
  * @date: 2020/8/11 11:46 下午
  */

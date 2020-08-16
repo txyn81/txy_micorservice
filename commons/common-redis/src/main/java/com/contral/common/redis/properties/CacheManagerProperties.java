@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.List;
 
 /**
- * @description: TODO
+ * @description: 缓存管理配置类
  * @author: oren.tang
  * @date: 2020/8/15 2:58 下午
  */

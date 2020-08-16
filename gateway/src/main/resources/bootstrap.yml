@@ -36,3 +36,7 @@ txy:
   gateway:
     dynamicRoute:
       enabled: true
+  oauth2:
+    token:
+      store:
+        type: redis
